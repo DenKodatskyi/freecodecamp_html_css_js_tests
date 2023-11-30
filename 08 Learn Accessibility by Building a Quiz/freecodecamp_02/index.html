@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="des">
+  <title>Accessibility by Building a Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--   -->
+  <header>
+    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+    <h1>HTML/CSS Quiz</h1>
+    <nav>
+      <ul>
+        <li><a href="student-info">INFO</a></li>
+        <li><a href="#html-questions">HTML</a></li>
+        <li><a href="#css-questions">CSS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+      <section role="region" aria-labelledby="student-info">
+        <h2 id="student-info">student-info</h2>
+        <div class="info">
+          <label for="name">Name</label>
+          <input id="name" type="name" name="name" placeholder="name">
+        </div>
+        <div class="info">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="email">
+        </div>
+        <div class="info">
+          <label for="date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+          <input id="date" type="date" name="date" placeholder="date">
+        </div>
+      </section>
+
+      <section role="region" aria-labelledby="html-questions">
+        <h2 id="html-questions">html-questions</h2>
+        <div class="question-block">
+          <p>1</p>
+          <fieldset class="question" name="html-question-one">
+            <legend>One</legend>
+            <ul class="answers-list">
+              <li>
+                <label for="q1-a1"><input id="q1-a1" type="radio" value="true" name="one"></label>True
+              </li>
+              <li>
+                <label for="q1-a2"><input id="q1-a2" type="radio" value="false" name="one"></label>False
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="question-block" name="html-question-one">
+          <p>2</p>
+          <fieldset class="question">
+            <legend>Two</legend>
+            <ul class="answers-list">
+              <li>
+                <label for="q2-a1"><input id="q2-a1" type="radio" value="true" name="two"></label>True
+              </li>
+              <li>
+                <label for="q2-a2"><input id="q2-a2" type="radio" value="false" name="two"></label>False
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+
+      <section role="region" aria-labelledby="css-questions">
+        <h2 id="css-questions">css-questions</h2>
+        <div class="formrow">
+          <div class="question-block">
+            <label for="quest1">Are you a frontend developer?</label>
+          </div>
+          <div class="answer">
+            <select name="quest1" id="quest1" required>
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="question-block">
+            <label for="quest2">Example answer</label>
+          </div>
+          <div class="answer">
+            <textarea name="quest2" id="quest2" cols="30" rows="10" placeholder="Example answer"></textarea>
+          </div>
+        </div>
+      </section>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <address>
+      <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+      San Francisco<br />
+      California<br />
+      USA
+    </address>
+  </footer>
+
+
+</body>
+
+</html>
